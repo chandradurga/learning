@@ -27,8 +27,8 @@ namespace CounterThread
         public const int DEFAULT_Y_OFFSET = 80;
         public const int DEFAULT_NO_ROWS = 2;
         public const int DEFAULT_NO_COLS = 2;
-        public const int DEFAULT_WIDTH = 60;
-        public const int DEFAULT_HEIGHT = 60;
+        public const int DEFAULT_WIDTH = 30;
+        public const int DEFAULT_HEIGHT = 30;
 
         public Form1()
         {
@@ -109,26 +109,15 @@ namespace CounterThread
                 while (true)
                 {
                     DrawGrid(2,2);
-
-                    /* iCounter++;
-                     labelCounter.Invoke(new MethodInvoker(delegate { labelCounter.Text = iCounter.ToString(); }));
-                     labelCounter.Text = iCounter.ToString();*/
-
-                  //  this.Refresh();
-
-
+                    
                     Thread.Sleep(500);
                     DrawGrid(4,4);
-                   // this.Refresh();
-
                     Thread.Sleep(500);
                     DrawGrid(6, 6);
-                   // this.Refresh();
-
+                
                     Thread.Sleep(500);
                     DrawGrid(8, 8);
-                   // this.Refresh();
-
+                
                     Thread.Sleep(500);
                 }
 
@@ -195,6 +184,11 @@ namespace CounterThread
         {
             DrawGrid(8, 8);
             this.Refresh();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
